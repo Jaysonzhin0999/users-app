@@ -1,59 +1,76 @@
-# UsersApp
+# Users Application (CRUD)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+This is a simple Users Management Application built with **Angular**. It supports **Create, Read, Update, and Delete (CRUD)** operations using a mock backend powered by **JSON Server**.
 
-## Development server
+## 📌 Tech Stack & Libraries Used
 
-To start a local development server, run:
+### **Frontend**
+- **Framework:** Angular (Standalone Components)
+- **UI Framework:** Angular Material (`MatTable`, `MatDialog`, `MatButton`, `MatIcon`, `MatSidenav`, etc.)
+- **Styling:** SCSS, Material Themes
+- **Routing:** Angular Router
+- **Forms & Validation:** Angular Forms (Reactive Forms)
+- **State Management:** Component-based State Management
+- **HTTP Client:** Angular HttpClient
 
-```bash
-ng serve
-```
+### **Backend (Mock Server)**
+- **Database:** JSON (via JSON Server)
+- **Fake API Server:** JSON Server
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📚 Key Libraries Used
 
-## Code scaffolding
+| Library              | Purpose                                    |
+|----------------------|--------------------------------------------|
+| `@angular/core`      | Core Angular functionality                 |
+| `@angular/router`    | Client-side navigation                     |
+| `@angular/forms`     | Form handling and validation               |
+| `@angular/material`  | UI components (buttons, tables, modals, etc.) |
+| `@angular/common`    | Common Angular utilities                   |
+| `json-server`        | Fake REST API for CRUD operations          |
+| `rxjs`              | Handling async data streams                 |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🗄️ Database & API
+- **Database Type:** JSON (used as a mock database)
+- **Backend:** JSON Server (`db.json` acts as a simple REST API)
+- **Operations Supported:** Create, Read, Update, Delete (CRUD)
 
-```bash
-ng generate component component-name
-```
+## ✨ Features Implemented
+✅ Standalone Angular Components (No NgModule)  
+✅ Modern UI with Angular Material  
+✅ CRUD with Fake API (JSON Server)  
+✅ Validation (Username, Password, Email, Birthdate)  
+✅ Material Dialog for Deletion Confirmation  
+✅ Password Masking with Toggle Visibility  
+✅ Navbar with Sidebar Navigation  
+✅ Mobile-Responsive Layout  
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+### 🚀 How to Run the Project
 
-## Building
+1. **Clone the Repository**
+   ```sh
+   git clone <repository-url>
+   cd users-app
 
-To build the project run:
+2. **Install Dependencies**
+    npm install
 
-```bash
-ng build
-```
+3. **Run JSON Server (Mock API)**
+    npm run json-server
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. **Run the Angular Application**
+    ng serve
 
-## Running unit tests
+5. **Open in Browser**
+    http://localhost:4200/
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
+### 🎯 Future Improvements
+Implement a real backend with Node.js / Express & MongoDB
+Improve UI animations and responsiveness
+Add user authentication & authorization
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📌 Author: Jayson Banjawan
+📅 Project Completion Date: March 2025
+🛠️ Built with ❤️ using Angular & JSON Server
