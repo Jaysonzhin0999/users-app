@@ -1,9 +1,12 @@
-<nav>
-  <nav>
-    <button (click)="goTo('/home')">Home</button>
-    <button (click)="goTo('/users')">View Users</button>
-  </nav>
+<nav class="navbar">
+  <div class="nav-container">
+    <button mat-button (click)="goTo('/home')">
+      <mat-icon>home</mat-icon> Home
+    </button>
+    <button mat-button (click)="goTo('/users')">
+      <mat-icon>group</mat-icon> View Users
+    </button>
+  </div>
 </nav>
-<hr />
 
 <router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+Category	Technology / Library Used
+
+Frontend:	Angular (Standalone Components)
+UI Framework:	Angular Material (MatTable, MatDialog, MatButton, MatIcon, MatSidenav, etc.)
+Styling:	SCSS, Material Themes
+Routing:	Angular Router
+Forms & Validation:	Angular Forms (Reactive Forms)
+State Management:	Component-based State Management
+HTTP Client	Angular: HttpClient
+Backend (Mock Server):	JSON Server
+Database (Mocked):	JSON (via JSON Server)
+
+Key Libraries Used
+
+Library	Purpose
+@angular/core:	Core Angular functionality
+@angular/router:	Client-side navigation
+@angular/forms:	Form handling and validation
+@angular/material:	UI components (buttons, tables, modals, icons)
+@angular/common:	Common Angular utilities
+json-server:	Fake REST API for CRUD operations
+rxjs:	Handling async data streams
+
+Database & API
+Database Type: JSON (used as a mock database)
+Backend: JSON Server (db.json acts as a simple REST API)
+Operations: Create, Read, Update, Delete (CRUD)
+
+Features Implemented
+Standalone Angular Components (No NgModule)
+Modern UI with Angular Material
+CRUD with Fake API (JSON Server)
+Validation (Username, Password, Email, Birthdate)
+Material Dialog for Deletion Confirmation
+Password Masking with Toggle Visibility
+Navbar with Sidebar Navigation
+Mobile-Responsive Layout

@@ -1,27 +1,68 @@
 <div class="container">
-    <h2>Users List</h2>
-    <button routerLink="/users/add" class="btn btn-primary">Add User</button>
-    
-    <table class="table table-striped mt-3">
-      <thead>
-        <tr>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Birth Date</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of users">
-          <td>{{ user.username }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.birthDate }}</td>
-          <td>
-            <button class="btn btn-warning" [routerLink]="['/users/edit', user.id]">Edit</button>
-            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <h2>Users List</h2>
+
+  <div class="mat-raised-button-container">
+    <button mat-raised-button color="primary" routerLink="/users/add">
+      <mat-icon>person_add</mat-icon> Add Contact
+    </button>
   </div>
-  
+
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Birth Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <span *ngIf="!showPassword[i]">••••••••</span>
+          <span *ngIf="showPassword[i]">{{ user.password }}</span>
+          <button mat-icon-button (click)="togglePassword(i)">
+            <mat-icon>{{
+              showPassword[i] ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+        </td>
+        <td>{{ user.birthDate }}</td>
+        <td>
+          <button
+            mat-icon-button
+            color="primary"
+            [routerLink]="['/users/edit', user.id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="openDeleteModal(user.id)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div *ngIf="showDeleteModal" class="modal-overlay">
+  <div class="modal-content">
+    <h3>Confirm Delete</h3>
+    <p>Are you sure you want to delete this user?</p>
+    <div class="modal-actions">
+      <button class="btn btn-danger" (click)="confirmDelete()">
+        Yes, Delete
+      </button>
+      <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>

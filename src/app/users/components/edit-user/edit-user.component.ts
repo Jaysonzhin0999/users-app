@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from '@shared/users.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-edit-user',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './edit-user.component.html',
-  styleUrls: ['./edit-user.component.css']
+  styleUrls: ['./edit-user.component.scss']
 })
 export class EditUserComponent implements OnInit {
   userForm!: FormGroup;
@@ -79,8 +80,6 @@ export class EditUserComponent implements OnInit {
       }
     );
   }
-
-
 
   cancel() {
     this.router.navigate(['/users']);

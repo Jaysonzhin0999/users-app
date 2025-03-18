@@ -16,7 +16,7 @@ export class AddUserComponent  {
 
   constructor(private fb: FormBuilder, private userService: UsersService, private router: Router) {
     this.userForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern(/^[a-zA-Z0-9._-]+$/)]],
+      username: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern(/^[a-zA-Z0-9._ -]+$/)]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20), Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,20}$/)]],
       email: ['', [Validators.required, Validators.email]],
       birthDate: ['', Validators.required]

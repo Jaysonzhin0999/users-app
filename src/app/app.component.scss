@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: #D4EBF8;
+    border: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    gap: 16px;
+  }
+  
+  button[mat-button] {
+    color: #1F509A;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  button[mat-button]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  

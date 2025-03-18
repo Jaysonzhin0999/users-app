@@ -5,35 +5,35 @@
       "username": "john_doe",
       "password": "P@ssw0rd123",
       "email": "john.doe@example.com",
-      "birthdate": "1990-05-15"
+      "birthDate": "1990-05-15"
     },
     {
       "id": "2",
-      "username": "jane_smith",
-      "password": "J@neDoe2024",
-      "email": "jane.smith@example.com",
-      "birthdate": "1995-09-23"
+      "username": "janesmiths",
+      "password": "Jaysonzhin!09",
+      "email": "jane.smith@gmail.com",
+      "birthDate": "1995-09-12"
     },
     {
       "id": "3",
       "username": "alex_dev",
       "password": "DevAlex!987",
       "email": "alex.dev@example.com",
-      "birthdate": "1988-12-07"
+      "birthDate": "1988-12-07"
     },
     {
-      "id": "e4a4",
+      "id": "4",
       "username": "foreshadcw",
-      "password": "Jaysonzhin!09",
+      "password": "Jaysonzhin!0999",
       "email": "jaysonzhin09@gmail.com",
-      "birthDate": "2025-03-12"
+      "birthDate": "2025-03-21"
     },
     {
-      "id": "9fa2",
-      "username": "foreshadcw",
-      "password": "Jaysonzhin09!",
-      "email": "jaysonzhin09@gmail.com",
-      "birthDate": "2025-03-19"
+      "id": "5",
+      "username": "Ikeu Sim",
+      "password": "Jaysonzhin091!",
+      "email": "btsnjoon94@gmail.com",
+      "birthDate": "2025-03-28"
     }
   ]
 }
