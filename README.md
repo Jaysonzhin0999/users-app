@@ -54,23 +54,28 @@ This is a simple Users Management Application built with **Angular**. It support
    cd users-app
 
 2. **Install Dependencies**
+    ```sh
     npm install
 
 3. **Run JSON Server (Mock API)**
+    ```sh
     npm run json-server
 
 4. **Run the Angular Application**
+    ```sh
     ng serve
 
 5. **Open in Browser**
+    ```sh
     http://localhost:4200/
 
 
 ### 🎯 Future Improvements
-Implement a real backend with Node.js / Express & MongoDB
-Improve UI animations and responsiveness
-Add user authentication & authorization
 
-📌 Author: Jayson Banjawan
-📅 Project Completion Date: March 2025
-🛠️ Built with ❤️ using Angular & JSON Server
+- **Implement a real backend with Node.js / Express & MongoDB**
+- **Improve UI animations and responsiveness**
+- **Add user authentication & authorization**
+
+- 📌 Author: Jayson Banjawan
+- 📅 Project Completion Date: March 2025
+- 🛠️ Built with ❤️ using Angular & JSON Server
