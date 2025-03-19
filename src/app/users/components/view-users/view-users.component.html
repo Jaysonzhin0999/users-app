@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users; let i = index">
+      <tr *ngFor="let user of paginatedUsers; let i = index">
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
         <td>
@@ -51,6 +51,26 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-container">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+
+    <button
+      *ngFor="let page of [].constructor(totalPages); let p = index"
+      (click)="setPage(p + 1)"
+      [class.active]="currentPage === p + 1"
+    >
+      {{ p + 1 }}
+    </button>
+
+    <button
+      (click)="nextPage()"
+      [disabled]="currentPage >= users.length / usersPerPage"
+    >
+      Next
+    </button>
+  </div>
 </div>
 
 <!-- Delete Confirmation Modal -->

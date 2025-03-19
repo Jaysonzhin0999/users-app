@@ -3,10 +3,11 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from '@shared/users.service';
 import { CommonModule } from '@angular/common';
+import { UserFormComponent } from '../user-form-component/user-form-component.component';
 
 @Component({
   selector: 'app-edit-user',
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule,UserFormComponent],
   templateUrl: './edit-user.component.html',
   styleUrls: ['./edit-user.component.scss']
 })

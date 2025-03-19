@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-view-users',
   standalone: true,
-  imports: [CommonModule, RouterModule,MatIconModule, MatButtonModule],
+  imports: [CommonModule, RouterModule, MatIconModule, MatButtonModule],
   templateUrl: './view-users.component.html',
   styleUrls: ['./view-users.component.scss']
 })
@@ -19,6 +19,8 @@ export class ViewUsersComponent {
   showPassword: boolean[] = [];
   showDeleteModal = false;
   userIdToDelete: string | null = null;
+  currentPage = 1;
+  usersPerPage = 5;
 
   constructor(private userService: UsersService) {
     this.userService.getUsers().subscribe(users => {
@@ -46,6 +48,32 @@ export class ViewUsersComponent {
       this.deleteUser(this.userIdToDelete);
     }
     this.closeModal();
+  }
+
+  // Pagination logic
+  get paginatedUsers() {
+    const startIndex = (this.currentPage - 1) * this.usersPerPage;
+    return this.users.slice(startIndex, startIndex + this.usersPerPage);
+  }
+
+  nextPage() {
+    if (this.currentPage < Math.ceil(this.users.length / this.usersPerPage)) {
+      this.currentPage++;
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.users.length / this.usersPerPage);
+  }
+
+  setPage(page: number) {
+    this.currentPage = page;
   }
 
   deleteUser(id: string) {
